@@ -42,7 +42,7 @@ Launching: 1-2 weeks after being approved.
 # Part 1
 
 HTML structure:
-Home page, Shop page, About Us page, Our Impact page, Contact Us  page, NGO-Goal page, navigation, header, body/main content and the footer 
+Home page, Shop page, About Us page, Our Impact page, Contact Us  page, NGO-Goal page, navigation, header, body/main content and the footer. THERE IS AN EXTRA PAGE I ADDED NAMED NGO-Goal.
 
 Research and content gathering:
 Images I got online.
