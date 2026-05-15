@@ -94,6 +94,5 @@ Icons8, (n.a). Wolrd Globe [Accessed: 11 May 2026] https://img.icons8.com/?size=
 
 Icons8, (n.a). Crowd C https://img.icons8.com/?size=100&id=l7Iqa1k8Ft-i&format=png&color=000000 [Accessed: 11 May 2026]
 
-Changelog
-All changes made to my project will be documented on this file.
+Meta AI. 2026. Provided structure of CHANGELOG [AI-generated content] Available at: meta.ai [Accessed 15 May 2026]
 
