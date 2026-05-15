@@ -30,6 +30,16 @@ Launching: 1-2 weeks after being approved.
 # Sitemap
 ![Website Sitemap] (img/mysitemap.png)
 
+# Changelog
+All changes made to my project will be documented on this file.
+
+Unreleased
+[2.0.0]- 15-05-2026
+Added
+-Github repository setup: k-smarts/Katleho_Mphuthi_ST10530534_Moni-Cloth
+
+[1.0.0]- 14-05-2026
+
 # Reference List:
 
 •	Domains. (n.d) Web Hosting Packages. [online] Available at: https://www.domains.co.za/web-hosting-south-africa [Accessed 13 April. 2026]
@@ -50,8 +60,6 @@ Icons8, (n.a). Wolrd Globe [Accessed: 11 May 2026] https://img.icons8.com/?size=
 
 Icons8, (n.a). Crowd C https://img.icons8.com/?size=100&id=l7Iqa1k8Ft-i&format=png&color=000000 [Accessed: 11 May 2026]
 
-
-
-
-
+Changelog
+All changes made to my project will be documented on this file.
 
