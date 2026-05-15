@@ -27,5 +27,31 @@ Testing: 7 days.
 
 Launching: 1-2 weeks after being approved.
 
-Sitemap
+# Sitemap
 ![Website Sitemap] (img/mysitemap.png)
+
+# Reference List:
+
+•	Domains. (n.d) Web Hosting Packages. [online] Available at: https://www.domains.co.za/web-hosting-south-africa [Accessed 13 April. 2026]
+•	HostAfrica. (2026) Website design and development costs. [online] Available at: https://hostafrica.co.za/blog/websites/website-basics/how-much-does-a-website-cost-in-south-africa [Accessed 13 April. 2026]
+•	Web.dev. (n.d) JavaScript. [online] Available at: https://web.dev/javascript  [Accessed 10 April. 2026]
+
+Rini Astiyah, R.A. (n.a). NGO. Available at: https://www.vecteezy.com/vector-art/19636946-ngo-or-non-governmental-organization-to-serve-specific-social-and-political-needs-in-template-hand-drawn-cartoon-flat-illustration [Accessed: 10 May 2026]
+
+Vector Stocker, (n.a). Best discount Available at: https://cdn5.vectorstock.com/i/1000x1000/06/89/best-discount-20-off-vector-23740689.jpg [Accessed: 10 May 2026]
+
+Depositphotos, (n.a). Fashion female shoe and accessories Available at: https://st4.depositphotos.com/6010472/20078/i/450/depositphotos_200789136-stock-photo-fashion-female-shoesand-accessories-flat.jpg [Accessed: 10 May 2026]
+
+Preminium Photo, (n.a). Joyful diversity stylish casual kids Available at: https://img.magnific.com/premium-photo/joyful-diversity-stylish-casual-kids-ensemble_1106493-159953.jpg?w=996 [Accessed: 10 May 2026]
+
+Icons8, (n.a). Raised hand [Accessed: 11 May 2026] https://img.icons8.com/?size=100&id=46948&format=png&color=000000 [Accessed: 11 May 2026]
+
+Icons8, (n.a). Wolrd Globe [Accessed: 11 May 2026] https://img.icons8.com/?size=100&id=32616&format=png&color=000000 [Accessed: 11 May 2026]
+
+Icons8, (n.a). Crowd C https://img.icons8.com/?size=100&id=l7Iqa1k8Ft-i&format=png&color=000000 [Accessed: 11 May 2026]
+
+
+
+
+
+
