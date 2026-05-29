@@ -17,11 +17,11 @@
   --primary: #8e24aa;
   --secondary: #fc5858;
   --background-light: #f3b2d0;
-  --white: #ffffff;
+  --white: #c2aabfe0;
   --text: #333333;
   --text-light: #666666;
   --border: #eeeeee;
-  --footer-bg: #48164d;
+  --footer-bg: #48164dde;
   
   /* Typography Scale */
   --font-size-xs: 0.75rem;
@@ -380,7 +380,7 @@ button:active {
    ========================================== */
 
 .form-section {
-  background-color: var(--white);
+  background-color: rgb(210, 135, 212);
   padding: var(--spacing-2xl);
   border-radius: var(--border-radius-lg);
   max-width: 500px;
