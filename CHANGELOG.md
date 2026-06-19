@@ -1555,3 +1555,129 @@ nav a:focus {
 ### Web Design
 - Web.dev: https://web.dev/
 - Smashing Magazine: https://www.smashingmagazine.com/
+
+
+# PART 3
+
+- Added jQuery accordion for Vision/Mission sections in About Us.html. Replaced static text with toggle panels for better UX.
+- Integrated Google Maps iframe for Johannesburg, Gauteng location. Used embed API with responsive container class.
+- Implemented lightbox gallery with jQuery. Clicking gallery images opens larger view in overlay modal.
+- Added CSS transitions for accordion hover + lightbox fade effects. No inline styles used.
+
+
+#  INDEX HTML CHANGES
+
+<!-- Fix script order - bottom of file -->
+
+<!-- Before -->
+<script src="JavaScript.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- After -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="JavaScript.js"></script>
+
+
+<!-- Fix script order - bottom of file -->
+
+<!-- Before -->
+<span class="active">All</span>
+<span>Upcoming</span>
+
+<!-- After -->
+<button class="filter-btn active" data-filter="all">All</button>
+<button class="filter-btn" data-filter="upcoming">Upcoming</button>
+<button class="filter-btn" data-filter="arrivals">Arrivals</button>
+<button class="filter-btn" data-filter="bestsellers">Best Sellers</button>
+<button class="filter-btn" data-filter="toprated">Top Rated</button>
+
+<!-- Fix product cards -->
+
+<!-- Before -->
+<section class="product-card" data category="Upcoming">
+
+<!-- After -->
+<section class="product-card" data-category="upcoming">
+<section class="product-card" data-category="arrivals">
+<section class="product-card" data-category="bestsellers">
+<section class="product-card" data-category="toprated">
+
+## JAVASCRIPT UPDATES
+
+// Accordion
+$(".accordion-toggle").click(function() {
+  $(this).next(".accordion-panel").slideToggle(300);
+});
+
+// Lightbox
+$(".gallery-img, .product-card button").click(function() {
+  var imgSrc = $(this).closest(".product-card").find("img.gallery-img").attr("src");
+  $("#lightbox").fadeIn(300);
+  $("#lightbox-img").attr("src", imgSrc);
+});
+$(".close, #lightbox").click(function(e) {
+  if(e.target === this) $("#lightbox").fadeOut(300);
+});
+
+// Product filter
+$(".filter-btn").click(function() {
+  var category = $(this).data("filter");
+  $(".filter-btn").removeClass("active");
+  $(this).addClass("active");
+  if(category === "all") {
+    $(".product-card").fadeIn(300);
+  } else {
+    $(".product-card").hide();
+    $(".product-card[data-category='" + category + "']").fadeIn(300);
+  }
+});
+
+
+### CSS UPDATES
+
+/* Filter buttons */
+.filter-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border: 2px solid #6a0dad;
+  background: white;
+  color: #6a0dad;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.filter-btn.active {
+  background: #6a0dad;
+  color: white;
+  box-shadow: 0 4px 8px rgba(106, 17, 141, 0.3);
+}
+
+# Changelog - Moni Cloth Website
+
+All notable changes made for SEO + code quality.
+
+## [1.1.0] - 2026-04-18
+### Fixed
+- **URL Structure**: Renamed files to lowercase, no spaces. `NGO-Goal.html` → `ngo-goal.html`
+- **Footer Consistency**: Changed city to `Pretoria` on ALL pages. Removed `Johannesburg` conflict for Local SEO
+- **NAP Added**: Added Name, Address, Phone to footer for Local SEO: Moni Cloth NGO Pretoria, Pretoria Gauteng, +27 12 345 6789
+
+### Added
+- **Meta Tags**: Added `<title>` + `<meta description>` to all pages for SEO
+- **Alt Text**: Improved image alt text: `alt="Moni Cloth Instagram page"` instead of `alt="Instagram"`
+- **Social Links**: Added Instagram, TikTok, Twitter-X links with `rel="noopener"` security
+- **Internal Links**: Added links between Shop → About → Impact pages
+- **Keywords**: Added `affordable kids clothes South Africa`, `women's clothing donations`, `Pretoria NGO` naturally in text
+
+### Changed
+- **Image Files**: Renamed `icons8-world-globe-80.png` → `global-reach-icon.png` for SEO
+- **Icon Files**: Renamed to `instagram-icon.png`, `tiktok-icon.png`, `twitter-x-icon.png` - lowercase, descriptive
+- **H1 Tags**: Ensured only 1 `<h1>` per page for proper header structure
+
+### Security
+- **Links**: Added `rel="noopener"` to all `target="_blank"` social links
+
+## [1.0.0] - Initial Version
+- Basic HTML structure for 6 pages
+- Flexbox navigation + footer
+- Purple theme + basic styling

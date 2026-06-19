@@ -350,15 +350,21 @@ button:active {
 }
 
 .btn-primary {
-  background-color: var(--primary);
-  color: var(--white);
-  border: 2px solid var(--primary);
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #a04598; 
+  color: white;
+  text-decoration: none; 
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: var(--secondary);
-  border-color: var(--secondary);
+   background-color: #a04598; 
 }
 
 .shop-btn {
@@ -496,12 +502,31 @@ footer section {
   text-decoration: underline;
 }
 
+
 .hero-content p {
   font-size: var(--font-size-base);
   color: var(--text-light);
   line-height: 1.8;
   max-width: 800px;
   margin: var(--spacing-lg) auto;
+}
+
+/* Accordion for Vision/Mission */
+.accordion-toggle {
+  cursor: pointer;
+  color: var(--secondary);  
+  text-decoration: underline; 
+  transition: color 0.3s;
+}
+
+.accordion-toggle:hover {
+  color:#a61e6a;
+}
+
+.accordion-panel {
+  display: none; 
+  text-align: center; 
+  padding: 0 20px var(--spacing-lg) 20px;
 }
 
 /* ==========================================
@@ -840,4 +865,185 @@ footer section {
 .px-lg {
   padding-left: var(--spacing-lg);
   padding-right: var(--spacing-lg);
+}
+/* ================= Lightbox Gallery  ============ */
+.gallery-img { 
+  cursor: pointer; 
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+.gallery-img:hover { transform: scale(1.05); }
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.lightbox-content {
+  margin: 5% auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: 20px; right: 40px;
+  color: white; font-size: 40px;
+  cursor: pointer;
+}
+
+/* Keep images inside product cards */
+.product-card {
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+}
+
+.product-card img.gallery-img {
+  width: 100%;
+  max-width: 200px; 
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.filter-tabs {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border: 2px solid #6a0dad;
+  background: white;
+  color: #6a0dad;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.filter-btn:hover {
+  background: #f0e6ff;
+}
+
+/* Highlighted/active state */
+.filter-btn.active {
+  background: #6a0dad;
+  color: white;
+  box-shadow: 0 4px 8px rgba(106, 17, 141, 0.3);
+}
+
+.icon {
+  display: flex;
+  gap: 20px; /* space between icons */
+  margin-top: 15px;
+}
+
+.icon img {
+  transition: transform 0.2s; /* hover effect */
+}
+
+.icon img:hover {
+  transform: scale(1.1); /* grows slightly on hover */
+}
+
+nav a {
+  position: relative;
+  transition: transform 0.2s ease, color 0.3s;
+}
+
+nav a:hover {
+  transform: translateY(-2px);
+  color: #8B5A96;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #8B5A96;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav {
+  background: linear-gradient(135deg, #E6D7F3 0%, #D4C2E8 100%); /* subtle gradient instead of flat */
+  padding: 15px 40px; /* more breathing room */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* soft shadow */
+  display: flex;
+  align-items: center;
+  gap: 40px; /* space between logo + links */
+}
+
+
+/* Depth and Spacing*/
+
+nav a {
+  font-weight: 500;
+  font-size: 16px;
+  color: #3D2A4D;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Link styling */
+
+nav a:hover {
+  background: rgba(139, 90, 150, 0.1); /* light purple pill on hover */
+  transform: translateY(-2px);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 4px;
+  left: 12px;
+  background: #8B5A96;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: calc(100% - 24px);
+}
+
+/* Logo */
+
+nav img {
+  height: 55px; /* bigger logo */
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+nav img:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+
+nav a.active {
+  background: #8B5A96;
+  color: white;
+}
+
+.stat-card .icon {
+  display: flex;
+  justify-content: center; /* centers image horizontally */
+  margin-bottom: 15px; /* space between icon + text */
 }

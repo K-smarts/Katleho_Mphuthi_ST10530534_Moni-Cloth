@@ -508,3 +508,58 @@ This project is developed for educational purposes as part of The IIE - Website 
 
 **Last Updated: 29 May 2026  
 **Version:** 2.0 (Part 2 Complete)
+
+
+# PART 3
+
+- Added jQuery accordion for Vision/Mission sections in About Us.html. Replaced static text with toggle panels for better UX.
+- Integrated Google Maps iframe for Johannesburg, Gauteng location. Used embed API with responsive container class.
+- Implemented lightbox gallery with jQuery. Clicking gallery images opens larger view in overlay modal.
+- Added CSS transitions for accordion hover + lightbox fade effects. No inline styles used.
+
+
+## Project Overview
+Moni Cloth is a website built with HTML, CSS, and JavaScript. It provides information about clothing donations, shop collections, and impact for women and children across South Africa since 2018.
+
+
+## Site Structure
+| Page | File Name | Purpose |
+| Home | `Home.html` | Landing page + mission |
+| Shop | `shop.html` | Clothing collections |
+| About Us | `about-us.html` | NGO story + team |
+| Our Impact | `impact.html` | Donations + global reach |
+| Contact | `contact.html` | NAP + form |
+| NGO Goal | `ngo-goal.html` | Mission & vision |
+
+## Technologies Used
+- HTML5 - Semantic structure
+- CSS3 + Flexbox - Layout + responsive design
+- JavaScript - Basic interactivity
+
+## Local SEO Info
+**Name:** Moni Cloth NGO Pretoria  
+**Address:** Pretoria, Gauteng, South Africa  
+**Phone:** +27 12 345 6789  
+**Email:** MoniCloth@fashion.com
+
+## Features Added
+- Responsive navigation with flexbox
+- Optimized images with descriptive alt text
+- Consistent footer with NAP + social links
+- Meta tags + title tags for SEO
+- Internal linking between all pages
+
+### REFERENCE LIST:
+
+Products images
+https://sl.bing.net/joZzb6V1pC0
+https://sl.bing.net/TcMl6XUA3M
+https://sl.bing.net/j3dAiRTWNl4
+
+Insert caption on images
+https://addtext.com/
+
+Social Media Icons
+https://www.flaticon.com/free-icons/instagram
+https://www.flaticon.com/free-icons/tik-tok
+https://www.flaticon.com/free-icons/twitter

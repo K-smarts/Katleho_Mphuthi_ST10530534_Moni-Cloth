@@ -42,3 +42,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+$(document).ready(function() {
+  // Lightbox gallery - works when you click image OR button
+  $(".gallery-img, .product-card button").click(function() {
+    var imgSrc = $(this).siblings("img").attr("src");
+    $("#lightbox").fadeIn(300);
+    $("#lightbox-img").attr("src", imgSrc);
+  });
+
+  // Close lightbox when clicking X or dark background
+  $(".close, #lightbox").click(function(e) {
+    if(e.target === this) {
+      $("#lightbox").fadeOut(300);
+    }
+  });
+});
+
+$(document).ready(function() {
+  $(".accordion-toggle").click(function() {
+    $(this).next(".accordion-panel").slideToggle(300);
+  });
+});
+
+$(".filter-btn").click(function() {
+  var category = $(this).data("filter");
+  
+  // Highlight active button
+  $(".filter-btn").removeClass("active");
+  $(this).addClass("active");
+  
+  // Show/hide products based on category
+  if(category === "all") {
+    $(".product-card").fadeIn(300);
+  } else {
+    $(".product-card").hide();
+    $(".product-card[data-category='" + category + "']").fadeIn(300);
+  }
+});
+
+
+

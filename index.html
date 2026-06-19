@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moni Cloth - Home</title>
+  <title>Home| Moni Cloth | Affordable Clothing NGO South Africa</title>
+  <meta name="description" content="Moni Cloth NGO provides affordable clothing for women and children across South Africa. Shop new collections or donate to support our mission since 2018.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,11 +16,11 @@
       </div>
       <nav>
         <li><a href="index.html">Home</a></li>
-        <li><a href="Shop.html">Shop</a></li>
-        <li><a href="About us.html">About Us</a></li>
-        <li><a href="Our impact.html">Our Impact</a></li>
-        <li><a href="Contact Us.html">Contact Us</a></li>
-        <li><a href="NGO-Goal.html">NGO Goal</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="our impact.html">Our Impact</a></li>
+        <li><a href="contact us.html">Contact Us</a></li>
+        <li><a href="ngo-Goal.html">NGO Goal</a></li>
       </nav>
       <div class="nav-right"></div>
     </div>
@@ -42,7 +43,8 @@
 
   <!-- ========== SEARCH CONTAINER ========== -->
   <section class="search-container">
-    <input type="text" placeholder="Search for products...">
+    <input type="text" id="SearchBar" placeholder="Search for products...">
+  
     <button type="button">Search</button>
   </section>
 
@@ -72,53 +74,82 @@
   <section class="products-section">
     <h3>Our Trendy Products</h3>
     <section class="filter-tabs">
-      <span class="active">All</span>
-      <span>New</span>
-      <span>Arrivals</span>
-      <span>Best Sellers</span>
-      <span>Top Rated</span>
+      <button class="filter-btn active" data-filter="all">All</button>
+<button class="filter-btn" data-filter="upcoming">Upcoming</button>
+<button class="filter-btn" data-filter="arrivals">Arrivals</button>
+<button class="filter-btn" data-filter="bestsellers">Best Sellers</button>
+<button class="filter-btn" data-filter="toprated">Top Rated</button>
     </section>
-    <section class="product-grid">
-      <section class="product-card">
-        <img src="images/product-1.png" alt="Product 1">
-        <button>View Product</button>
-      </section>
-      <section class="product-card">
-        <img src="images/product-2.png" alt="Product 2">
-        <button>View Product</button>
-      </section>
-      <section class="product-card">
-        <img src="images/product-3.png" alt="Product 3">
-        <button>View Product</button>
-      </section>
-      <section class="product-card">
-        <img src="images/product-4.png" alt="Product 4">
-        <button>View Product</button>
-      </section>
-      <section class="product-card">
-        <img src="images/product-5.png" alt="Product 5">
-        <button>View Product</button>
-      </section>
+    <section class="product-card" data-category="upcoming">
+  <img src="heels and handbags (1).png" class="gallery-img" alt="Product 1">
+  <button>View Product</button>
+</section>
+
+<section class="product-card" data-category="arrivals">
+  <img src="handbags.png" class="gallery-img" alt="Product 2">
+  <button>View Product</button>
+</section>
+
+<section class="product-card" data-category="arrivals">
+  <img src="heels.png" class="gallery-img" alt="Product 3">
+  <button>View Product</button>
+</section>
+
+<section class="product-card" data-category="bestsellers">
+  <img src="Kid's section.PNG" class="gallery-img" alt="Product 4">
+  <button>View Product</button>
+</section>
+
+<section class="product-card" data-category="toprated">
+  <img src="Women's section.PNG" class="gallery-img" alt="Product 5">
+  <button>View Product</button>
+</section>
     </section>
   </section>
 
   <!-- ========== FOOTER ========== -->
   <footer>
-    <section>
-      <h3>Contact Us</h3>
-      <p>Email: MoniCloth@fashion.com</p>
-      <p>Location: Johannesburg, Gauteng</p>
-    </section>
-    <section>
-      <h3>FAQ</h3>
-      <div class="faq-line"></div>
-      <div class="faq-line"></div>
-      <div class="faq-line"></div>
-      <div class="faq-line"></div>
-      <div class="faq-line"></div>
-    </section>
-  </footer>
+  <section>
+    <h3>Contact Us</h3>
+    <p><strong>Moni Cloth Home Johannesburg</strong></p>
+    <p>Email: MoniCloth@fashion.com</p>
+    <p>Location: Johannesburg, Gauteng, South Africa</p>
+    <p>Phone: +27 12 345 6789</p>
+  </section>
+  
+  <section>
+    <h3>Follow Us</h3>
+    <div class="icon">
+  <a href="https://instagram.com" target="_blank" rel="noopener">
+    <img src="instagram.png" alt="Instagram" width="50" height="50">
+  </a>
+  <a href="https://tiktok.com" target="_blank" rel="noopener">
+    <img src="tik-tok.png" alt="TikTok" width="50" height="50">
+  </a>
+  <a href="https://twitter.com" target="_blank" rel="noopener">
+    <img src="twitter.png" alt="Twitter/X" width="50" height="50">
+  </a>
+</div>
+  </section>
+  
+  <section>
+    <h3>FAQ</h3>
+    <div class="faq-line"></div>
+    <div class="faq-line"></div>
+    <div class="faq-line"></div>
+  </section>
+  
+  <p>© 2018 Moni Cloth NGO</p>
+</footer>
 
   <script src="JavaScript.js"></script>
+
+  <div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" alt="">
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="JavaScript.js"></script>
+</body>
 </body>
 </html>
