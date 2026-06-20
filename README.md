@@ -549,17 +549,162 @@ Moni Cloth is a website built with HTML, CSS, and JavaScript. It provides inform
 - Meta tags + title tags for SEO
 - Internal linking between all pages
 
+#  INDEX HTML CHANGES
+
+
+<!-- Before -->
+<script src="JavaScript.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- After -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="JavaScript.js"></script>
+
+
+<!-- Fix script order - bottom of file -->
+
+<!-- Before -->
+<span class="active">All</span>
+<span>Upcoming</span>
+
+<!-- After -->
+<button class="filter-btn active" data-filter="all">All</button>
+<button class="filter-btn" data-filter="upcoming">Upcoming</button>
+<button class="filter-btn" data-filter="arrivals">Arrivals</button>
+<button class="filter-btn" data-filter="bestsellers">Best Sellers</button>
+<button class="filter-btn" data-filter="toprated">Top Rated</button>
+
+<!-- Fix product cards -->
+
+<!-- Before -->
+<section class="product-card" data category="Upcoming">
+
+<!-- After -->
+<section class="product-card" data-category="upcoming">
+<section class="product-card" data-category="arrivals">
+<section class="product-card" data-category="bestsellers">
+<section class="product-card" data-category="toprated">
+
+## JAVASCRIPT UPDATES
+
+// Accordion
+$(".accordion-toggle").click(function() {
+  $(this).next(".accordion-panel").slideToggle(300);
+});
+
+// Lightbox
+$(".gallery-img, .product-card button").click(function() {
+  var imgSrc = $(this).closest(".product-card").find("img.gallery-img").attr("src");
+  $("#lightbox").fadeIn(300);
+  $("#lightbox-img").attr("src", imgSrc);
+});
+$(".close, #lightbox").click(function(e) {
+  if(e.target === this) $("#lightbox").fadeOut(300);
+});
+
+// Product filter
+$(".filter-btn").click(function() {
+  var category = $(this).data("filter");
+  $(".filter-btn").removeClass("active");
+  $(this).addClass("active");
+  if(category === "all") {
+    $(".product-card").fadeIn(300);
+  } else {
+    $(".product-card").hide();
+    $(".product-card[data-category='" + category + "']").fadeIn(300);
+  }
+});
+
+
+### CSS UPDATES
+
+/* Filter buttons */
+.filter-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border: 2px solid #6a0dad;
+  background: white;
+  color: #6a0dad;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.filter-btn.active {
+  background: #6a0dad;
+  color: white;
+  box-shadow: 0 4px 8px rgba(106, 17, 141, 0.3);
+}
+
+
+## Project Description
+A responsive e-commerce landing page for Moni-Cloth with jQuery-powered interactivity. Features include product filtering, image lightbox, and FAQ accordion to improve user experience.
+
+## Files Updated
+1. index.html - Structure + product cards + filter buttons
+2. JavaScript.js - All jQuery interactivity code  
+3. style.css - Filter button styling + active states
+
+## Changes/Changelog
+
+### 1. jQuery Library Integration
+*Added:* jQuery 3.7.1 CDN link in index.html  
+*Fixed:* Script loading order - jQuery now loads before JavaScript.js  
+*Reason:* Ensures $ functions work without "jQuery not defined" errors
+
+### 2. Product Filter System 
+*Added:* 5 filter buttons: All, Upcoming, Arrivals, Best Sellers, Top Rated  
+*Implementation:* 
+- Changed <span> tags to <button class="filter-btn"> 
+- Added data-filter attributes to buttons
+- Added data-category attributes to each .product-card
+- Fixed typo: data category → data-category 
+- Standardized categories to lowercase: upcoming, arrivals, bestsellers, toprated
+
+*JS Logic:* Click button → hide all cards → fade in matching category → highlight active button  
+*CSS:* .filter-btn.active gives purple background + white text + shadow
+
+### 3. Image Lightbox Gallery
+*Added:* Click any product image or "View Product" button → opens full-size image in overlay  
+*Implementation:* 
+- Hidden #lightbox div in HTML
+- JS reads src from clicked image and displays in lightbox
+- Click outside image or X button to close with fadeOut()
+
+### 4. FAQ Accordion  
+*Added:* Click question → answer slides down. Click again → slides up  
+*Implementation:* .accordion-toggle triggers .slideToggle(300) on next panel
+
+## How to Test Features
+1. *Filter:* Click "Arrivals" → only arrival products show. Click "All" → all 5 products return
+2. *Active Button:* Clicked filter turns purple with shadow
+3. *Lightbox:* Click any product image → full image pops up in dark overlay
+4. *Accordion:* Click FAQ question → answer slides open smoothly
+
+## Technical Notes
+- All animations use jQuery fadeIn(300), fadeOut(300), slideToggle(300) for 300ms duration
+- Categories are case-sensitive - all set to lowercase for consistency
+- Product categories assigned: 2x Arrivals, 1x Upcoming, 1x Bestsellers, 1x Top Rated
+
+## Evidence
+1. Filter "All" showing 5 products
+2. Filter "Arrivals" showing 2 products  
+3. Lightbox open on product click
+4. Accordion panel open
+
+## Status
+✅ Task 2.1 Complete - All jQuery interactivity implemented and tested
+
 ### REFERENCE LIST:
 
-Products images
+Products images:
 https://sl.bing.net/joZzb6V1pC0
 https://sl.bing.net/TcMl6XUA3M
 https://sl.bing.net/j3dAiRTWNl4
 
-Insert caption on images
+Insert caption on images of product images:
 https://addtext.com/
 
-Social Media Icons
+Social Media Icons:
 https://www.flaticon.com/free-icons/instagram
 https://www.flaticon.com/free-icons/tik-tok
 https://www.flaticon.com/free-icons/twitter
