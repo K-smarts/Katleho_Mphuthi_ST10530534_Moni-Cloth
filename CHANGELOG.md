@@ -1567,7 +1567,6 @@ nav a:focus {
 
 #  INDEX HTML CHANGES
 
-<!-- Fix script order - bottom of file -->
 
 <!-- Before -->
 <script src="JavaScript.js"></script>
@@ -1656,22 +1655,19 @@ $(".filter-btn").click(function() {
 
 All notable changes made for SEO + code quality.
 
-## [1.1.0] - 2026-04-18
+## [1.1.0] 
 ### Fixed
 - **URL Structure**: Renamed files to lowercase, no spaces. `NGO-Goal.html` → `ngo-goal.html`
-- **Footer Consistency**: Changed city to `Pretoria` on ALL pages. Removed `Johannesburg` conflict for Local SEO
-- **NAP Added**: Added Name, Address, Phone to footer for Local SEO: Moni Cloth NGO Pretoria, Pretoria Gauteng, +27 12 345 6789
+- **NAP Added**: Added Name, Address, Phone to footer for Local SEO: Moni Cloth NGO Johannesburg, Johannesburg Gauteng, +27 12 345 6789
 
 ### Added
 - **Meta Tags**: Added `<title>` + `<meta description>` to all pages for SEO
 - **Alt Text**: Improved image alt text: `alt="Moni Cloth Instagram page"` instead of `alt="Instagram"`
 - **Social Links**: Added Instagram, TikTok, Twitter-X links with `rel="noopener"` security
 - **Internal Links**: Added links between Shop → About → Impact pages
-- **Keywords**: Added `affordable kids clothes South Africa`, `women's clothing donations`, `Pretoria NGO` naturally in text
 
 ### Changed
-- **Image Files**: Renamed `icons8-world-globe-80.png` → `global-reach-icon.png` for SEO
-- **Icon Files**: Renamed to `instagram-icon.png`, `tiktok-icon.png`, `twitter-x-icon.png` - lowercase, descriptive
+- **Icon Files**: Renamed to `instagram.png`, `tiktok.png`, `twitter.png` - lowercase.
 - **H1 Tags**: Ensured only 1 `<h1>` per page for proper header structure
 
 ### Security
